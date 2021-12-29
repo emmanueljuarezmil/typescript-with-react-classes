@@ -1,6 +1,7 @@
-import { User } from '../model/Model'
+import { User, UserAttribute } from '../model/Model'
 
 export class AuthService {
+
   public async login(userName: string, password: string):Promise<User | undefined> {
     if (userName === 'user' && password === '1234') {
       return {
@@ -10,5 +11,26 @@ export class AuthService {
     } else {
       return undefined
     }
+  }
+
+  public async getUserAttributes(user: User):Promise<UserAttribute[]>{
+    const result: UserAttribute[] = [];
+    result.push({
+      Name: 'Description',
+      Value: 'Best user ever!'
+    })
+    result.push({
+      Name: 'Job',
+      Value: 'Engineer'
+    })
+    result.push({
+      Name: 'Age',
+      Value: '25'
+    })
+    result.push({
+      Name: 'Experience',
+      Value: '3 years'
+    })
+    return result
   }
 }
