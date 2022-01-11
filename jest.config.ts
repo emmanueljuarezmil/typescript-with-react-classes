@@ -16,7 +16,8 @@ const config: Config.InitialOptions = {
   testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.{ts,tsx}'
+    'src/**/*.{ts,tsx}',
+    '!src/services/**'
   ]
 }
 
