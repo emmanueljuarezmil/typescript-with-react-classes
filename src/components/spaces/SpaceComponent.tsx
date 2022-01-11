@@ -21,7 +21,7 @@ export class SpaceComponent extends React.Component<SpaceComponentProps> {
   }
 
   render(){
-    return <div className="spaceComponent">
+    return <div className="space-component">
       {this.renderImage()}
       <label className="name">{this.props.name}</label><br/>
       <label className="spaceId">{this.props.spaceId}</label><br/>
